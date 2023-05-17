@@ -1,0 +1,23 @@
+.section-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%; /* Altere para a largura desejada */
+    max-width: 90vw; /* Defina uma largura máxima para os blocos */
+    height: 250px;
+    margin: 10px auto; /* Adicione "auto" para centralizar horizontalmente */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F2E5D7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-group h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #483C3C;
+    text-align: center;
+    margin-top: 10px;
+  }
+  

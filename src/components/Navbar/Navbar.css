@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: ghostwhite;
+  }
+  
+  .div__brand {
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .links__navbar {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    column-gap: 1em;
+    margin-right: 20px;
+  }
+  
+  .links__navbar a {
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 20px;
+    color: #333; /* Altera a cor dos links */
+    transition: color 0.3s ease;
+  }
+  
+  .links__navbar a:hover {
+    color: #007bff; /* Altera a cor dos links ao passar o mouse */
+    cursor: pointer;
+  }
+  

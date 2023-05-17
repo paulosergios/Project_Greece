@@ -1,0 +1,40 @@
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .options label {
+    flex: 1;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .options select {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    appearance: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .options select:focus {
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+  }
+  
+  .options select:hover {
+    cursor: pointer;
+  }
+  
+  .options select:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,18 @@
+:root{
+  --paragraph-color: #fff
+}
+
+.carousel_height img{
+  object-fit: cover;
+  height: 700px;
+}
+
+.carousel_height p{
+  color: var(--paragraph-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.carousel_height h3{
+  font-size: 40px;
+}
