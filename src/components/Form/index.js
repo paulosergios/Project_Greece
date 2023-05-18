@@ -6,33 +6,31 @@ import './Form.css'
 import groupcity from '../../data/groupcity'
 
 const Form = (props) => {
-    
 
     const [name, setName] = useState('')
     const [departure, setDeparture] = useState('')
     const [travel, setTravel] = useState('')
     const [destiny, setDestiny] = useState('')
 
-    const Aosubmeter = (event) =>{
-        event.preventDefault()
+    const Aosubmeter = (event) => {
+        event.preventDefault();
         props.newPeopleRegist({
-            name,
-            departure,
-            travel,
-            destiny
-        }) 
+        name,
+        departure,
+        travel,
+        destiny,
+        });
+       };
+       
 
-        const formData = {
-            name,
-            departure,
-            travel,
-            destiny
-          };
-      
-          localStorage.setItem('formData', JSON.stringify(formData));
-    }
-
-    
+    const formData = {
+        name,
+        departure,
+        travel,
+        destiny
+      };
+  
+      localStorage.setItem('formData', JSON.stringify(formData));
 
     return(
         <div className='container'>
@@ -66,7 +64,7 @@ const Form = (props) => {
                     valor={travel}
                     onAlt={valor =>setTravel(valor)}    
                 />  
-                <Button onClick={Aosubmeter}>
+                <Button>
                     Register
                 </Button>          
             </form>
