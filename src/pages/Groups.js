@@ -1,46 +1,24 @@
 import Footer from "../components/Footer";
 import Group from "../components/Group";
 import Navbar from "../components/Navbar";
-import groupcity from "../data/groupcity"
-import useNewPeople from "../data/newPeople";
-import { useState, useEffect, useRef } from 'react'
+import groupcity from "../data/groupcity";
 
-
-function Groups() {
-
-  const { group, newPeople } = useNewPeople();
-  const newPeopleRef = useRef(newPeople);
-  const [formData, setFormData] = useState(null);
-
-  useEffect(() => {
-    const storedFormData = localStorage.getItem('formData');
-    if (storedFormData) {
-      setFormData(JSON.parse(storedFormData));
-    }
-
-    const storedGroupData = localStorage.getItem('groupData');
-    if (storedGroupData) {
-      newPeopleRef.current(JSON.parse(storedGroupData));
-    }
-  }, []);
-  console.log(groupcity)
+function Groups(props) {
   return (
     <div>
-      <Navbar />
-      {groupcity.map(grp => {
-        const filteredGroup = group.filter(gr => gr.groupcity === grp.name && gr.departure === formData.departure);
-        return (
+      <Navbar /> {/* Render the navigation bar */}
+      <section>
+        {groupcity.map(grp => (
           <Group
-            name={grp.name}
-            key={grp.name}
-            colorBackground={grp.colorBackground}
-            colorTitle={grp.colorTitle}
-            group={filteredGroup}
+            key={grp.name} // Unique key for each Group component
+            cityname={grp.name} // Pass the city name as a prop
+            colorBackground={grp.colorBackground} // Pass the background color as a prop
+            colorTitle={grp.colorTitle} // Pass the title color as a prop
+            group={props.group.filter(filtro => filtro.destiny === grp.name)} // Filter the group based on the city name
           />
-        );
-      })}
-
-      <Footer />
+        ))}
+      </section>
+      <Footer /> {/* Render the footer */}
     </div>
   );
 }

@@ -21,14 +21,14 @@
   }
   
   .links__navbar a {
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none;
     font-size: 20px;
-    color: #333; /* Altera a cor dos links */
+    color: #333;
     transition: color 0.3s ease;
   }
   
   .links__navbar a:hover {
-    color: #007bff; /* Altera a cor dos links ao passar o mouse */
+    color: #007bff;
     cursor: pointer;
   }
   

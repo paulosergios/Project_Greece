@@ -3,7 +3,6 @@ import Button from '../Button'
 import Options from '../Options'
 import TextField from '../TextField'
 import './Form.css'
-import groupcity from '../../data/groupcity'
 
 const Form = (props) => {
 
@@ -20,22 +19,15 @@ const Form = (props) => {
         travel,
         destiny,
         });
+        setName('')
+        setDeparture('')
+        setTravel('')
+        setDestiny('')
        };
-       
-
-    const formData = {
-        name,
-        departure,
-        travel,
-        destiny
-      };
-  
-      localStorage.setItem('formData', JSON.stringify(formData));
-
     return(
         <div className='container'>
             <img src='../image/greece_img.jpg' alt='greek lands' />
-            <h3>Insira seus dados</h3>
+            <h3>Insert your information</h3>
             <form className="form" onSubmit={Aosubmeter}>
                 <TextField 
                     label="Your Name" 
@@ -54,7 +46,7 @@ const Form = (props) => {
                 <Options 
                     required={true} 
                     label="Cities" 
-                    city={groupcity.map(city => city.name)}
+                    city={props.groupcity}
                     valor={destiny}
                     onAlt={valor =>setDestiny(valor)}     
                 />

@@ -4,15 +4,13 @@ import './Group.css'
 const Group = (props) => {
   return (
     <section className="section-group" style={{ backgroundColor: props.colorBackground }}>
-      <h3 style={{ color: props.colorTitle }}>{props.name}</h3>
-      {props.group.map((grp) => (
-        <Card
-          key={grp.name}
-          name={grp.name}
-          departure={grp.departure}
-          travel={grp.travel}
-        />
+      <h3 style={{ color: props.colorTitle }}>{props.cityname}</h3>
+      <div className='card-container'>
+      {props.group.map((data) => (
+        <Card key={data.id} nome={data.name} departure={data.departure} travel={data.travel} className="card"/>
       ))}
+
+      </div>
     </section>
   );
 };

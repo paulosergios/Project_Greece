@@ -2,10 +2,10 @@ import './TextField.css'
 
 const TextField = (props) =>{
 
-    const placeholderalt = `${props.placeholder}`
+    const placeholdermod = `${props.placeholder}`
 
-    const onwrite = (event) =>{
-        props.onAlt(event.target.value) 
+    const onwrit = (event) => {
+        props.onAlt(event.target.value)
     }
 
     return(
@@ -13,7 +13,7 @@ const TextField = (props) =>{
             <label>
                 {props.label}
             </label>
-            <input value={props.valor} onChange={onwrite} required={props.required} placeholder={placeholderalt}/>
+            <input value={props.valor} onChange={onwrit} required={props.required} placeholder={placeholdermod}/>
         </div>
     )
 }

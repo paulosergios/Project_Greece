@@ -1,19 +1,14 @@
 import './Options.css'
 
-const Options = (props) => {
-
-    const onwrite = (event) =>{
-        props.onAlt(event.target.value)
-    }
-
+const Options = ({onAlt, label, valor, rqd = false, city }) => {
 
     return (
         <div className='options'>
             <label>
-                {props.label}
+                {label}
             </label>
-            <select value={props.valor} onChange={onwrite} required={props.required}>
-                {props.city.map(ct => {
+            <select value={valor} onChange={event => onAlt(event.target.value)} required={rqd}>
+                {city.map(ct => {
                     return <option key={ct}>{ct}</option>
                 })}
             </select>
